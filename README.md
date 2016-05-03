@@ -1,4 +1,4 @@
-Replace rev'd asset references in your JS compiled with Webpack!
+Replace rev'd asset references in your production JS compiled with Webpack!
 
 ## Example
 **Source File**
