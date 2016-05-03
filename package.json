@@ -1,0 +1,20 @@
+{
+  "name": "rev-replace-loader",
+  "version": "0.1.1",
+  "description": "Webpack loader to replace asset paths with hashed ones from a rev-manifest.json file",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vigetlabs/rev-replace-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "rev",
+    "replace",
+    "rev-manifest",
+    "gulp-rev",
+    "gulp-rev-replace"
+  ],
+  "author": "Dan Tello",
+  "license": "MIT"
+}
