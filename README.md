@@ -2,19 +2,19 @@ Replace rev'd asset references in your production JS compiled with Webpack!
 
 ## Example
 **Source File**
-```
+```js
 var assetPath = "path/to/asset.jpg"
 ```
 
 **rev-manifest.json**
-```
+```json
 {
   "path/to/asset.jpg": "path/to/asset-78950a808a.jpg"
 }
 ```
 
 **Output**
-```
+```js
 var assetPath = "path/to/asset-78950a808a.jpg"
 ```
 
