@@ -16,5 +16,8 @@
     "gulp-rev-replace"
   ],
   "author": "Dan Tello",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "0.2.16"
+  }
 }
