@@ -1,8 +1,9 @@
-var path = require('path')
+var path        = require('path')
+var loaderUtils = require('loader-utils')
 
 module.exports = function(source) {
 
-  var query = JSON.parse(this.query.substr(1))
+  var query = loaderUtils.parseQuery(this.query)
   var manifest = query.manifest || (query.manifestPath ? requireManifest(query.manifestPath) : false)
 
   if (manifest) {
