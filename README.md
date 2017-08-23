@@ -20,6 +20,7 @@ var assetPath = "path/to/asset-78950a808a.jpg"
 
 ## Configuration
 You can either pass a `manifest` object directly, or pass a `manfiestPath` for the loader to try. The latter will not error if no manifest file is found. Filenames will simply remain the same.
+The `manifestPath` parameter also supports `glob` queries.
 
 ```js
   module: {
