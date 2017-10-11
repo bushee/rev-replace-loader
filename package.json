@@ -15,7 +15,6 @@
     "gulp-rev",
     "gulp-rev-replace"
   ],
-  "author": "Dan Tello",
   "license": "MIT",
   "dependencies": {
     "glob": "7.1.2",
