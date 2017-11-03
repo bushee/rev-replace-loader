@@ -1,5 +1,7 @@
 # CHANGELOG
 
-## 0.2.0
+## 0.3.0
+- Added support for prefix in search queries
 
-- Add support for globbing of file paths
+## 0.2.0
+- Added support for globbing of file paths
