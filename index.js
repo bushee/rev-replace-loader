@@ -5,12 +5,13 @@ var loaderUtils = require('loader-utils');
 module.exports = function (source) {
     var query = loaderUtils.parseQuery(this.query);
     var manifest = query.manifest || (query.manifestPath ? requireManifests(query.manifestPath) : false);
+    var prefix = query.prefix || '';
 
     if (manifest) {
         for (var key in manifest) {
             if (manifest.hasOwnProperty(key)) {
                 var value = manifest[key];
-                var pattern = new RegExp(key, 'gm');
+                var pattern = new RegExp(prefix + key, 'gm');
                 source = source.replace(pattern, value);
             }
         }
