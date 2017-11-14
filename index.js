@@ -4,7 +4,7 @@ var loaderUtils = require('loader-utils');
 
 module.exports = function (source) {
     var query = loaderUtils.parseQuery(this.query);
-    var manifest = query.manifest || (query.manifestPath ? requireManifests(query.manifestPath) : false);
+    var manifest = getManifest(query);
     var prefix = query.prefix || '';
 
     if (manifest) {
@@ -19,6 +19,26 @@ module.exports = function (source) {
 
     return source;
 };
+
+var cache = {
+    cached: {},
+    get: function (path) {
+        if (!this.cached[path]) {
+            this.cached[path] = requireManifests(path);
+        }
+        return this.cached[path];
+    }
+};
+
+function getManifest(query) {
+    if (query.manifest) {
+        return query.manifest;
+    }
+    if (query.manifestPath) {
+        return cache.get(query.manifestPath);
+    }
+    return false;
+}
 
 function requireManifests(manifestGlob) {
     return glob.sync(manifestGlob).map(function (path) {
